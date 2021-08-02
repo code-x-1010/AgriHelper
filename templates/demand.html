@@ -1,0 +1,24 @@
+{% extends 'fin_base.html' %}
+
+{% block content %}
+    <br><br><br>
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Rank</th>
+            <th scope="col">Crop ID</th>
+            <th scope="col">Demand Score</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for demand in demands %}
+            <tr>
+                <th scope="row">{{ demand.rank }}</th>
+                <td>{{ demand.id }}</td>
+                <td>{{ demand.score }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <br>
+    <br>
+    <form action="transportvechile" method="post">
+        {% csrf_token %}
+        <input type="text" name="dri" placeholder="Driver NO"><br>
+        <input type="text" name="num" placeholder="Vechile NO"><br>
+        <input type="text" name="sat" placeholder="Status"><br>
+        <input type="submit">
+    </form>
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Vechile NO</th>
+            <th scope="col">Emp ID</th>
+            <th scope="col">Pincode</th>
+            <th scope="col">Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for s in sales %}
+            <tr>
+                <th scope="row">{{ s.vechile_no }}</th>
+                <td>{{ s.emp.emp_id }}</td>
+                <td>{{ s.pincode }}</td>
+                <td>{{ s.status }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

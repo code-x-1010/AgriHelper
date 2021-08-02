@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+    <br><br><br>
+    <form method="post" action="updatevechile">
+        {% csrf_token %}
+        <div class="container">
+            <label for="vec"><b>Vechile NO</b></label>
+            <input type="text" placeholder="Enter Vechile NO" name="vec" required>
+
+            <label for="pin"><b>New Pincode</b></label>
+            <input type="text" placeholder="Enter New Pincode" name="pin" required>
+
+            <label for="status"><b>New Status</b></label>
+            <input type="text" placeholder="Enter New Status" name="status" required>
+            <button type="submit">Change</button>
+        </div>
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+            <br>
+            <h4>{{ message }}</h4>
+        {% endfor %}
+    {% endif %}
+    </body>
+    </html>
+    </div>
+{% endblock %}

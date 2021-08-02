@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    <br><br>
+    <div class="container-fluid">
+        <br>
+        <a>ID : {{ emp.emp.emp_id }}</a>
+        <br>
+        <a>Name : {{ emp.emp.emp_name }}</a>
+        <br>
+        <a>Mobile NO : {{ emp.emp.mobile_no }}</a>
+        <br>
+        <a>Aadhar NO : {{ emp.emp.aadhar_no }}</a>
+        <br>
+        <a>Department : {{ emp.emp.dept }}</a>
+        <br>
+        <a>Designation : {{ emp.emp.desgn }}</a>
+        <br>
+        <a>Salary : {{ emp.emp.salary }}</a>
+        <br>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'cust_base.html' %}
+{% block content %}
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .container {
+            padding: 16px;
+        }
+    </style>
+    <form method="post" action="buy">
+        {% csrf_token %}
+        <div class="container">
+            <label for="crop"><b>Crop ID</b></label>
+            <input type="text" placeholder="Enter Crop ID" name="crop" required>
+
+            <label for="qty"><b>Quanity (in Kg)</b></label>
+            <input type="text" placeholder="Enter Quantity" name="qty" required>
+
+            <button type="submit">Order</button>
+        </div>
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+            <h4>{{ message }}</h4>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

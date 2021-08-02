@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+    <br><br><br>
+    <form method="post" action="updatedriver">
+        {% csrf_token %}
+        <div class="container">
+            <label for="vec"><b>Vechile NO</b></label>
+            <input type="text" placeholder="Enter Vechile NO" name="vec" required>
+
+            <label for="id"><b>New Driver ID</b></label>
+            <input type="text" placeholder="Enter New Driver ID" name="id" required>
+
+            <button type="submit">Change</button>
+        </div>
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+            <br>
+            <h4>{{ message }}</h4>
+        {% endfor %}
+    {% endif %}
+    </body>
+    </html>
+    </div>
+{% endblock %}

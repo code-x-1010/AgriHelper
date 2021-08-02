@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+    <br><br><br>
+    <form method="post" action="updateinspect">
+        {% csrf_token %}
+        <div class="container">
+            <label for="ord"><b>Order NO</b></label>
+            <input type="text" placeholder="Enter Order NO" name="ord" required>
+
+            <label for="dat"><b>New Inspection Date</b></label>
+            <input type="date" placeholder="Enter New Date" name="dat" required>
+
+            <label for="status"><b>New Result</b></label>
+            <input type="text" placeholder="Enter New Result" name="status" required>
+            <button type="submit">Change</button>
+        </div>
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+            <br>
+            <h4>{{ message }}</h4>
+        {% endfor %}
+    {% endif %}
+    </body>
+    </html>
+    </div>
+{% endblock %}
