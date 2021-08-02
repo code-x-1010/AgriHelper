@@ -1,0 +1,94 @@
+nav {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20;
+}
+
+nav a img {
+    padding-left: 10px;
+    padding-right: 20px;
+    transform: scale(0.7);
+}
+
+#slides {
+    margin-top: -300px;
+    transform: scale(0.7);
+
+}
+
+#slides img {
+    border-radius: 5%;
+}
+
+#slides .content {
+    background-color: whitesmoke;
+    border-radius: 5%;
+}
+
+#about {
+    font-family: 'Fauna One', serif;
+    font-size: larger;
+    margin-top: 50px;
+    background-color: whitesmoke;
+    border-radius: 10%;
+    padding: 40px;
+
+}
+
+body {
+    background-color: bisque;
+}
+
+#about h1 {
+    font-family: Cinzel, serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+#mission h1 {
+    font-family: Cinzel, serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+#mission {
+    font-family: 'Fauna One', serif;
+    font-size: larger;
+    margin-top: 50px;
+    background-color: whitesmoke;
+    border-radius: 10%;
+    padding: 40px;
+
+}
+
+#contact h1 {
+    font-family: Cinzel, serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#contact {
+    font-family: 'Fauna One', serif;
+    font-size: larger;
+    margin-top: 50px;
+    background-color: whitesmoke;
+    border-radius: 10%;
+    padding: 40px;
+    position: relative;
+
+}
+
+.phone {
+    margin-top: 70px;
+}
+
+.network {
+    margin-right: 400px;
+    margin-top: 140px;
+    margin-bottom: 0;
+    transform: scale(4);
+}
