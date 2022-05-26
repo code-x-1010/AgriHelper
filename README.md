@@ -1,7 +1,7 @@
 # AgriHelper
 This is my CSE2004 project
 
-# AIM
+# About the application
 Agriproducts procurement and sales management system is a system which maintains the 
 various records needed by the client to smoothly work in procuring and sales of 
 agricultural products. This system has been designed to computerize and automate the 
